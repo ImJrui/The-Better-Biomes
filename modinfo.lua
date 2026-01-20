@@ -6,7 +6,7 @@ local function translate(String)  -- use this fn can be automatically translated
 end
 
 --The name of the mod displayed in the 'mods' screen.
-name = translate({en = "the better biomes", zh = "更好的地形(地图)"})
+name = translate({en = "The Better Biomes", zh = "更好的地形(地图)"})
 
 --A description of the mod.
 description = translate({
@@ -18,7 +18,7 @@ description = translate({
 author = "TUTU"
 
 --A version number so you can ask people if they are running an old version of your mod.
-version = "1.0.4"
+version = "1.0.6"
 
 --This lets other players know if your mod is out of date. This typically needs to be updated every time there's a new game update.
 api_version = 10
@@ -48,7 +48,7 @@ configuration_options={ --模组变量配置
 		options ={	
 					{description = translate({en = "Always", zh = "总是"}), data = 1},
 					{description = translate({en = "Never",  zh = "从不"}), data = 0},
-					{description = translate({en = "Random", zh = "随机"}), data = 2},
+					{description = translate({en = "Random(Default)", zh = "随机(默认)"}), data = 2},
 				},
 		default = 1
 	},
@@ -60,7 +60,7 @@ configuration_options={ --模组变量配置
 		options ={	
 					{description = translate({en = "Always", zh = "总是"}), data = 1},
 					{description = translate({en = "Never",  zh = "从不"}), data = 0},
-					{description = translate({en = "Random", zh = "随机"}), data = 2},
+					{description = translate({en = "Random(Default)", zh = "随机(默认)"}), data = 2},
 				},
 		default = 1
 	},
@@ -72,7 +72,7 @@ configuration_options={ --模组变量配置
 		options ={	
 					{description = translate({en = "Always", zh = "总是"}), data = 1},
 					{description = translate({en = "Never",  zh = "从不"}), data = 0},
-					{description = translate({en = "Random", zh = "随机"}), data = 2},
+					{description = translate({en = "Random(Default)", zh = "随机(默认)"}), data = 2},
 				},
 		default = 0
 	},
@@ -84,7 +84,7 @@ configuration_options={ --模组变量配置
 		options ={	
 					{description = translate({en = "Always", zh = "总是"}), data = 1},
 					{description = translate({en = "Never",  zh = "从不"}), data = 0},
-					{description = translate({en = "Random", zh = "随机"}), data = 2},
+					{description = translate({en = "Random(Default)", zh = "随机(默认)"}), data = 2},
 				},
 		default = 0
 	},
@@ -97,7 +97,7 @@ configuration_options={ --模组变量配置
 		label = translate({en = "The Largest Sacred", zh = "最大的圣地"}),--游戏里显示的名字
 		options ={	
 					{description = translate({en = "Enable", zh = "开启"}), data = true},
-					{description = translate({en = "Disable",  zh = "关闭"}), data = false},
+					{description = translate({en = "Disable(Default)",  zh = "关闭(默认)"}), data = false},
 				},
 		default = true
 	},
@@ -109,7 +109,7 @@ configuration_options={ --模组变量配置
 		options ={	
 					{description = translate({en = "Always", zh = "总是"}), data = 1},
 					{description = translate({en = "Never",  zh = "从不"}), data = 0},
-					{description = translate({en = "Random", zh = "随机"}), data = 2},
+					{description = translate({en = "Random(Default)", zh = "随机(默认)"}), data = 2},
 				},
 		default = 2
 	},
@@ -121,7 +121,7 @@ configuration_options={ --模组变量配置
 		options ={	
 					{description = translate({en = "Always", zh = "总是"}), data = 1},
 					{description = translate({en = "Never",  zh = "从不"}), data = 0},
-					{description = translate({en = "Random", zh = "随机"}), data = 2},
+					{description = translate({en = "Random(Default)", zh = "随机(默认)"}), data = 2},
 				},
 		default = 2
 	},
@@ -133,7 +133,7 @@ configuration_options={ --模组变量配置
 		options ={	
 					{description = translate({en = "Always", zh = "总是"}), data = 1},
 					{description = translate({en = "Never",  zh = "从不"}), data = 0},
-					{description = translate({en = "Random", zh = "随机"}), data = 2},
+					{description = translate({en = "Random(Default)", zh = "随机(默认)"}), data = 2},
 				},
 		default = 2
 	},
@@ -145,9 +145,22 @@ configuration_options={ --模组变量配置
 		options ={	
 					{description = translate({en = "Always", zh = "总是"}), data = 1},
 					{description = translate({en = "Never",  zh = "从不"}), data = 0},
-					{description = translate({en = "Random", zh = "随机"}), data = 2},
+					{description = translate({en = "Random(Default)", zh = "随机(默认)"}), data = 2},
 				},
 		default = 2
+	},
+
+	{name = "Title",label = translate({en = "Others", zh = "其他"}),options = {{description = "", data = ""},}, default = "",},
+
+	{
+		name = "RemoveTwiggyTree",--modmain脚本里调用变量
+		hover = translate({en = "No longer generate twiggy tree worlds", zh = "不再生成多枝树世界"}),
+		label = translate({en = "Remove Twiggy Tree", zh = "移除多枝树"}),--游戏里显示的名字
+		options ={	
+					{description = translate({en = "Enable", zh = "启用"}), data = true},
+					{description = translate({en = "Disable(Default)",  zh = "禁用(默认)"}), data = false},
+				},
+		default = false
 	},
 }
 
